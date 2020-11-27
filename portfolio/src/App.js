@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
-import profile from './assets/profile.png'
-import './index.css'
+import profile from './assets/profile.png';
+import Joke from './Joke'
+import './index.css';
 
 class App extends Component {
     state = {
@@ -49,6 +50,7 @@ class App extends Component {
                 <hr/>
                 <Projects />
                 <SocialProfiles />
+                <Joke />
             </div>
         )
     }

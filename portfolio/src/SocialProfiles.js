@@ -6,12 +6,12 @@ class SocialProfile extends Component {
     render() {
         const { id, link, image, description } = this.props.profile;
         return(
-            <div key={id} style={{display: "inline-block", width: 60, margin: 10, marginTop: 40}} >
-                <a href={link}>
+            <div className='social-profile' key={id}>
+                <a href={link} >
                     <img 
+                        className='social-profile-img'
                         src={image}
                         alt={description}
-                        style={{ width: 40, height: 40}}
                     />
                 </a>
             </div>
