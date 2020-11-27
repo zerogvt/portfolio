@@ -7,7 +7,7 @@ import './index.css';
 
 class App extends Component {
     state = {
-        displayBio: true
+        displayBio: false
     }
     toggleBio = () => {
         console.log(this)
@@ -22,14 +22,14 @@ class App extends Component {
                 <img src={profile} alt='profile' className='profile'/>
                 <h1>Hello!</h1>
                 <p>
+                    Thanks for dropping by.
+                </p>
+                <p>
                     My name is Vasilis and I am a software engineer.
                 </p>
                 <p>
                     I'm always looking forward to working on 
                     challenging and meaningfull projects.
-                </p>
-                <p>
-                    Thanks for dropping by.
                 </p>
                 {
                     this.state.displayBio ?
@@ -37,8 +37,15 @@ class App extends Component {
                         <div>
                             <p>I split time between Ireland and Greece.</p>
                             <p>I code every day.</p>
-                            <p>My favorite language is Python but I also love working with JS and Golang.</p>
-                            <p>I also love/need learning new technologies.</p>
+                            <p>My favorite language is Python but I also have a crush on React, Golang 
+                                and a secret desire for Elixir.</p>
+                            <p>I like building things that are easy to maintain.</p>
+                            <p>KISS (Keep It Small And Simple) philosophy resonates deeply with me.</p>
+                            <p>I like working in an agile way, adding a bit of value on every iteration.</p>
+                            <p>I love learning new technologies and diving deeper in familiar ones.</p>
+                            <p>I have a good understanding of various fields ranging from essential algorithms 
+                                up to networking, systems and reliability engineering, continuous integration and 
+                                web development. And I love to use it all and expand on them.</p>
                             <p>Besides Software Engineering I also like trekking and sailing.</p>
                             <button onClick={this.toggleBio}> Less </button>
                         </div>
