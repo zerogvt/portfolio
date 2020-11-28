@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
-import profile from './assets/profile.png';
+import profile from '../assets/profile.png';
 import Joke from './Joke'
-import './index.css';
+import '../index.css';
 
 class App extends Component {
     state = {
         displayBio: false
     }
     toggleBio = () => {
-        console.log(this)
         this.setState({
             displayBio: !this.state.displayBio
         })
@@ -21,9 +20,6 @@ class App extends Component {
             <div>
                 <img src={profile} alt='profile' className='profile'/>
                 <h1>Hello!</h1>
-                <p>
-                    Thanks for dropping by.
-                </p>
                 <p>
                     My name is Vasilis and I am a software engineer.
                 </p>

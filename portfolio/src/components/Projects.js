@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PROJECTS from './data/project';
+import PROJECTS from '../data/project';
 
 class Project extends Component {
     render() {
@@ -19,7 +19,7 @@ class Projects extends Component {
     render() {
         return (
             <div>
-                <h2>highlighted projects</h2>
+                <h2>Highlighted projects</h2>
                 <div>
                     {
                         PROJECTS.map( PROJECT => {
