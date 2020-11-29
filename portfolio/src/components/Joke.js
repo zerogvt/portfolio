@@ -18,7 +18,7 @@ class Joke extends Component {
         return(
             <div className='joke'>
                 <Header />
-                <h4>Thanks for dropping by. Here's a random joke:</h4>
+                <h3>Thanks for dropping by. Here's a random joke:</h3>
                 <p>{setup}</p>
                 <p><em>{punchline}</em></p>
                 <div>

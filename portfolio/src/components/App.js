@@ -55,7 +55,6 @@ class App extends Component {
                 <hr/>
                 <Projects />
                 <SocialProfiles />
-                <Joke />
             </div>
         )
     }

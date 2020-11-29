@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//<h3><Link to='/'>Home</Link></h3>
-//<h3><Link to='/joke'>Joke</Link></h3>
+
+const style = {
+    display: 'inline-block',
+    margin: 10,
+    marginBottom: 30
+};
+
 class Header extends Component {
     render() {
         return (
-            <div>
+            <div className='nav'>
+                <h3 style={style}><Link exact to='/'>Home </Link></h3>
+                <h3 style={style}><Link to='/joke'>Joke</Link></h3>
             </div>
         )
     }
