@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 
 class Tracks extends Component {
+    state = { audio: null, playingUrl: null}
+
+    playTrack = url => () => {
+        if (this.state.audio) {
+            this.state.audio.pause()
+            if (this.state.playingUrl === url) {
+                this.setState({ audio: null });
+                return;
+            }
+        }
+        const audio = new Audio(url);
+        this.setState({playingUrl: url, audio: audio})
+        audio.play();
+    }
     render(){
         if (!this.props.tracks) return null;
         const tracks = this.props.tracks.tracks
@@ -10,10 +24,16 @@ class Tracks extends Component {
             {
                 tracks.map( track => { 
                     return (
-                        <div key={track.uri}>
-                            <img src={track.album.images[0].url} alt='track' />
+                        <div className='track'>
+                        <h4>{track.name}</h4>
+                        <img 
+                            className='trackImage'
+                            src={track.album.images[0].url}
+                            alt='track'
+                            onClick={this.playTrack(track.preview_url)}
+                        />
                         </div>
-                        )
+                    )
                 })
             }
             </div>

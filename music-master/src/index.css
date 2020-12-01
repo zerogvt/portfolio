@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.track {
+  display: inline-block;
+  margin: 20px;
+}
+
+.trackImage {
+  width: 200px;
+  height: 200px;
+}
