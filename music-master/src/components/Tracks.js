@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 
 class Tracks extends Component {
     state = { audio: null, playingUrl: null}
+    
+    trackIcon = track => {
+        if (!track.preview_url) {
+          return <span>N/A</span>;
+        }
+        if (
+          this.state.audio &&
+          this.state.playingUrl === track.preview_url
+        ) {
+          return <span>| |</span>;
+        }
+        return <span>&#9654;</span>;
+      }
 
     playTrack = url => () => {
         if (this.state.audio) {
@@ -24,14 +37,18 @@ class Tracks extends Component {
             {
                 tracks.map( track => { 
                     return (
-                        <div className='track'>
-                        <h4>{track.name}</h4>
+                        <div className='track'
+                            onClick={this.playTrack(track.preview_url)}
+                        >
                         <img 
                             className='trackImage'
                             src={track.album.images[0].url}
                             alt='track'
-                            onClick={this.playTrack(track.preview_url)}
                         />
+                        <div className='trackText'>
+                        <p>{track.name}</p>
+                        <p>{this.trackIcon(track)}</p>
+                        </div>
                         </div>
                     )
                 })

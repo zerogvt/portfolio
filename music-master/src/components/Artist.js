@@ -9,7 +9,9 @@ class Artist extends Component {
                     <h2>{name}</h2>
                     <p>{followers.total} followers</p>
                     <p>{genres.join(', ')}</p>
-                    <img src={images[0].url} alt='artist-profile' />
+                    <img src={images[0].url}
+                    alt='artist-profile'
+                    className='artistImage'/>
                 </div>
             )
         }
