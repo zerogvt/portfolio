@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap');
 
 body {
-    text-align: justify;
+    text-align: center;
     text-justify: inter-word;
     font-size: 16px;
     padding: 2.5%;
     font-family: 'Noto Sans JP', sans-serif;
+}
+
+.bioImage {
+    display: block;
+    position: relative;
+    margin-left: auto;
+}
+
+.bioText {
+    text-align: justify;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,8 +37,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-profile-img {
+    display: inline-block;
     width: 60px;
     margin: 20px;
     margin-top: 10px;
 }
 
+.tags{
+    color: gray;
+    font-style: italic;
+    font-size: smaller;
+    font-weight: lighter;
+}

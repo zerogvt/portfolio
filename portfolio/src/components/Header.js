@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const style = {
     display: 'inline-block',
-    margin: 10,
+    marginRight: 20,
     marginBottom: 30
 };
 

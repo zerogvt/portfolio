@@ -3,14 +3,15 @@ import PROJECTS from '../data/project';
 
 class Project extends Component {
     render() {
-        const {title, image, description, link} = this.props.project;
+        const {title, image, description, tags, link} = this.props.project;
         return (
             <div style={{display: "inline-block", "vertical-align": 'text-top', width: 300, margin: 10}}>
                 <h3>{title}</h3>
-                <p>{description}</p>
                 <a href={link}>
                     <img src={image} alt='profile' style={{width: 150, height:150}} />
                 </a>
+                <p>{description}</p>
+                <p className='tags'> { tags ? tags.join(', ') : "" } </p>
             </div>
         )
     }
