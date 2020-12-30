@@ -18,7 +18,7 @@ const PROJECTS = [
         id: 2,
         title: 'Newsdrops',
         description: ['A news frontpage site similar to Hackernews'],
-        tags: ['Django', 'web', 'heroku'],
+        tags: ['Django', 'python', 'web', 'heroku'],
         image: newsdrops,
         link: "https://newsdrops.herokuapp.com/"
     },
